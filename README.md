@@ -6,17 +6,16 @@ You can find here the analysis of the paper " The Role of Expert Users in Inform
 In other words, you will find here everything you need to reproduce this research.
 First, read the paper and then follow the instructions below.
 
+## Environment
+- MySQL database version 5.6.31 (available at http://dev.mysql.com/downloads/)
+- Ubuntu version 15.10
+- HeidiSQL version 9.3.0.4984
+
 ### Dataset Instructions
 
 In this research, we used two datasets. we used the first dataset to perform experiments to identify experts and worthy discussions. 
 
 The second one, to find the topic of expertise of an experts using semantic techniques.
-
-
-## Environment
-- MySQL database version 5.6.31 (available at http://dev.mysql.com/downloads/)
-- Ubuntu version 15.10
-- HeidiSQL version 9.3.0.4984
 
 
 ### Dataset to Identify Experts and Worthy Discussions
