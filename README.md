@@ -110,3 +110,9 @@ comentario_resposta| Comment on answer text
 - Execute: Rscript discussion.R
 - Open folder discussion_length/part-2
 - Execute: Rscript discussion.R
+
+### Section 5.1 - Correlation Analysis
+
+- Using dataset1
+- Open folder: graph_correlarions 
+- Execute: Rscript graph.R
