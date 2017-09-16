@@ -123,11 +123,17 @@ comentario_resposta| Comment on answer text
 - Open folder: degree_distribution 
 - Execute: Rscript degree_distribution.R
 
-### 5.3 Sub-communities
+### Section 5.3 - Sub-communities
 
 - Using dataset 1
 - Open folder: sub-communities
 - Execute: Rscript subcommunities.R
+
+### Section 5.4 - Homophily
+
+- Using dataset 1
+- Open folder: homophily
+- Execute: Rscript homophily.R
 
 
 ### Section 7.3.1 Top 50 Users with Highest Reputation Grouped by Expertise
