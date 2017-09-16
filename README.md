@@ -111,26 +111,33 @@ comentario_resposta| Comment on answer text
 - Open folder discussion_length/part-2
 - Execute: Rscript discussion.R
 
-### Section 5.1 - Correlation Analysis
+### Section 5.1 - Graph Correlation Analysis
 
 - Using dataset 1
 - Open folder: graph_correlarions 
 - Execute: Rscript graph.R
 
+### Section 5.2 - Degree Distribution
 
-### Section 7.3.1. Top 50 Users with Highest Reputation Grouped by Expertise
+- Using dataset 1
+- Open folder: degree_distribution 
+- Execute: Rscript degree_distribution.R
+
+
+
+### Section 7.3.1 Top 50 Users with Highest Reputation Grouped by Expertise
 
 - Using dataset 2
 - Open folder: grouped_expertise 
 - Execute: Rscript table-5.R
 
-### Section 7.3.2. Groups of Users with More Answers
+### Section 7.3.2 Groups of Users with More Answers
 
 - Using dataset 2
 - Open folder: grouped_answers
 - Execute: Rscript table-6.R
 
-### Section 7.3.3. Recommendation Testing
+### Section 7.3.3 Recommendation Testing
 
 - Using dataset 2
 - Open folder: recommendation
