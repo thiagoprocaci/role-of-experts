@@ -42,7 +42,7 @@ if(runModel) {
   modelFit <- train(goodDiscussion ~ experts + indegree + outdegree + pagerank + betweeness + eigenvector, data = dataTrain, 
                     method = "nnet",  
                     trControl = fitControl,
-                    metric = "Sens",
+                    metric = "ROC",
                     verbose = FALSE)
   print(modelFit)
   
@@ -54,9 +54,9 @@ if(runModel) {
   print(cm)
   
   trellis.par.set(caretTheme())
-  print(plot(modelFit, metric = "Sens"))
+  print(plot(modelFit, metric = "ROC"))
   
-  print(plot(modelFit, metric = "Sens", plotType = "level",
+  print(plot(modelFit, metric = "ROC", plotType = "level",
              scales = list(x = list(rot = 90))))
 }
 
