@@ -135,6 +135,25 @@ comentario_resposta| Comment on answer text
 - Open folder: homophily
 - Execute: Rscript homophily.R
 
+### Section 6.1 - Finding Experts
+
+- Using dataset 1
+- Open folder: classification/discussion
+- Execute: Rscript prediction-gbm.R
+- Execute: Rscript prediction-nb.R
+- Execute: Rscript prediction-nnet.R
+- Execute: Rscript prediction-svm.R
+
+
+### Section 6.1 - Finding a Worthy Discussion
+
+- Using dataset 1
+- Open folder: classification/expert
+- Execute: Rscript prediction-gbm.R
+- Execute: Rscript prediction-nb.R
+- Execute: Rscript prediction-nnet.R
+- Execute: Rscript prediction-svm.R
+
 
 ### Section 7.3.1 Top 50 Users with Highest Reputation Grouped by Expertise
 
