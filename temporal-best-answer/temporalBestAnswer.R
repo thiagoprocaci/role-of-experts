@@ -115,13 +115,16 @@ finalData[is.na(finalData)] <- 0
 yrange <- range(c( (finalData$expertsBestAnswer/finalData$numberUserBestAnswer), (finalData$nonExpertsBestAnswer/finalData$numberUserBestAnswer))) 
 xrange <- range(finalData$periodAnswer)
 
+
+png("fig2.png", width = 1000, height = 770, res = 230)
 plot(xrange, yrange, xlab="Month", ylab="Probability of Best Answer", type = "n" )
 #points(quantModulosRangeLNS, tempoRangeLNS, col="red")
-lines(finalData$periodAnswer, (finalData$expertsBestAnswer/finalData$numberUserBestAnswer), col="red", lwd = 2.1 )
+lines(finalData$periodAnswer, (finalData$expertsBestAnswer/finalData$numberUserBestAnswer), col="red", lwd = 2.1)
 lines(finalData$periodAnswer, (finalData$nonExpertsBestAnswer/finalData$numberUserBestAnswer), col="blue", lwd = 2.1)
-legend(1, 0.6, legend=c("Experts", "Others"),
-       col=c("red", "blue"), lty=1:1, cex=0.9)
+legend(1, 0.65, legend=c("Experts", "Non-Experts"),
+       col=c("red", "blue"), lty=1:1, cex=0.6)
 
+dev.off()
 
 existsDiff((finalData$expertsBestAnswer/finalData$numberUserBestAnswer), (finalData$nonExpertsBestAnswer/finalData$numberUserBestAnswer), "Prob. Best Answer Expert X Non Expert")
 

@@ -1,5 +1,6 @@
 #C. Users Interactions and Evolution Analysis
 options(warn=-1)
+library(ggplot2)
 
 source("../functions/Functions.R")
 
@@ -20,7 +21,8 @@ dataQuestionCommentNonExp = subset(dataQuestionComment, dataQuestionComment$expe
 yrange <- range(c(dataAnswer$answerByUser, dataAnswerComment$answerCommentByUser, dataQuestionComment$questionCommentByUser ))
 xrange <- range(c(dataAnswer$monthId, dataAnswerComment$monthId, dataQuestionComment$monthId))
 
-
+png("fig1.png", height=3.5, width=4.7, res = 400, units = 'in')
+par(mar=c(4,4,2,2)+0.1)
 plot(xrange, yrange, xlab="Time Slice", ylab="Avg. Participation", type = "n" )
 
 lines(dataAnswerExp$monthId, dataAnswerExp$answerByUser, col="red", lwd = 2.1 )
@@ -30,7 +32,9 @@ lines(dataAnswerCommentNonExp$monthId, dataAnswerCommentNonExp$answerCommentByUs
 lines(dataQuestionCommentExp$monthId, dataQuestionCommentExp$questionCommentByUser, col="gray", lwd = 2.1)
 lines(dataQuestionCommentNonExp$monthId, dataQuestionCommentNonExp$questionCommentByUser, col="black", lwd = 2.1)
 legend(-1, 9.3, legend=c("Exp Avg Answer", "Non Exp Avg Answer", "Exp Avg Com Answer" , "Non Exp Avg Com Answer", "Exp Avg Com Question", "Non Exp Avg Com Question"),    
-       col=c("red", "blue", "green", "orange", "gray", "black"), lty=1:1, cex=0.8, lwd = 5.1)
+       col=c("red", "blue", "green", "orange", "gray", "black"), lty=1:1, cex=0.49, lwd = 5.1, text.font=2)
+dev.off()
+
 
 
 print("Summary dataAnswerExp answerByUser")

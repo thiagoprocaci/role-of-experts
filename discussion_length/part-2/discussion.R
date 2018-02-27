@@ -13,8 +13,17 @@ allData[ , "contains_expert"] <- ifelse(allData$hasExp == 1, 'yes', 'no')
 
 for(tagName in tagNameList) {
   selectedData = subset(allData, allData$tagname ==  tagName )
-  obj <- qplot(monthid, avgThreadLen, colour=contains_expert, data =  selectedData, xlab = "Time Slice", ylab = "Avg. Discussion Length", main = tagName)
-  print(obj)
+  print(tagName)
+  if(tagName %in% c("cell-biology") ) {
+    #tiff('test.tiff', units="in", width=5, height=5, res=300)
+    qplot(monthid, avgThreadLen, colour=contains_expert, data =  selectedData, xlab = "Time Slice", ylab = "Avg. Discussion Length", main = tagName)
+    #dev.off()
+    ggsave("fig4.png", height=2.3, width=4, units='in', dpi=400)
+  } else {
+    obj <- qplot(monthid, avgThreadLen, colour=contains_expert, data =  selectedData, xlab = "Time Slice", ylab = "Avg. Discussion Length", main = tagName)
+    print(obj)  
+  }
+  
   experts = subset(selectedData, selectedData$hasExp == 1)
   nonexperts = subset(selectedData, selectedData$hasExp == 0)
  # hist(selectedData$avgThreadLen)
