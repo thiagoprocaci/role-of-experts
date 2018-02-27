@@ -54,7 +54,10 @@ if(runModel) {
   print(cm)
   
   trellis.par.set(caretTheme())
+  png("fig17.png", height=3.5, width=4.7, res = 400, units = 'in')
+  par(mar=c(4,4,2,2)+0.1)
   print(plot(modelFit, metric = "ROC"))
+  dev.off()
   
   print(plot(modelFit, metric = "ROC", plotType = "level",
              scales = list(x = list(rot = 90))))
