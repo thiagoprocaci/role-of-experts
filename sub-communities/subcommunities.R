@@ -45,7 +45,8 @@ p <- ggplot(nodata, aes(x=subcommunity, y=subcommunitySize)) +
   geom_point(aes(size=expertCount, colour=nonexpertCount) ) + 
   scale_size_continuous(limits=c(0, 260), name="Approx. Num. Experts")
   
-print(p)
+ggsave("fig7.png", height=4, width=7, units='in', dpi=200)
+#print(p)
 
 p <- ggplot(dataMore10Member, aes(x=subcommunity, y=subcommunitySize)) +
   
@@ -53,7 +54,8 @@ p <- ggplot(dataMore10Member, aes(x=subcommunity, y=subcommunitySize)) +
   geom_point(aes(size=expertCount, colour=nonexpertCount) ) + 
   scale_size_continuous(limits=c(30, 260), name="Approx. Num. Experts")
 
-print(p)
+ggsave("fig8.png", height=4, width=7, units='in', dpi=200)
+#print(p)
 
 #print(summary(nodata$subcommunitySize))
 

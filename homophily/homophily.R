@@ -31,7 +31,9 @@ p <- ggplot(graphData,  aes(log(weight), colour = as.character(relation))) +
   labs(x = "Relation Weight - Log Scale", colour="Relation") +
   scale_color_manual(labels = c("Non Exp to Non Exp", "Exp to Exp", "Exp to Non Exp"), values=c("red", "green" , "blue") )  +
   geom_density()
-print(p)
+#print(p)
+
+ggsave("fig9.png", height=4, width=7, units='in', dpi=200)
 
 #p <- ggplot(graphData, aes(x=relation, colour = weight)) +
 #  labs(x = "Relation", y = "Frequency") + 

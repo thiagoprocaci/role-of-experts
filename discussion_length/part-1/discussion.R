@@ -10,7 +10,8 @@ xrange <- range(threadLen$monthid)
 experts = subset(threadLen, threadLen$hasExp == 1)
 nonExpert = subset(threadLen, threadLen$hasExp == 0)
 
-png("fig3.png", width = 1000, height = 800, res = 230)
+png("fig3.png", height=3.5, width=4.7, res = 400, units = 'in')
+par(mar=c(4,4,2,2)+0.1)
 plot(xrange, yrange, xlab="Time Slice", ylab="Avg. Discussion Length", type = "n" )
 
 lines(experts$monthid, experts$avgThreadLen, col="red", lwd = 2.1 )

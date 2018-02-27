@@ -166,7 +166,8 @@ b <- ggplot(graphData, aes(x=id, y=indegree)) +
   geom_point(aes(size=outdegree, colour=expert) ) + 
   scale_size_continuous(limits = c(0, 300), breaks = c(0, 50, 100, 150, 200, 250, 300 ), name="Approx. Outdegree")
 
-print(b)
+ggsave("fig5.png", height=4, width=7, units='in', dpi=200)
+#print(b)
 
 # Density plots
 #p <- ggplot(graphData, aes(x=eigenvector, colour=expert)) + geom_density()

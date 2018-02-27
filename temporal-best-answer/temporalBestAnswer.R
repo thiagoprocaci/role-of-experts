@@ -116,7 +116,8 @@ yrange <- range(c( (finalData$expertsBestAnswer/finalData$numberUserBestAnswer),
 xrange <- range(finalData$periodAnswer)
 
 
-png("fig2.png", width = 1000, height = 770, res = 230)
+png("fig2.png", height=3.5, width=4.7, res = 400, units = 'in')
+par(mar=c(4,4,2,2)+0.1)
 plot(xrange, yrange, xlab="Month", ylab="Probability of Best Answer", type = "n" )
 #points(quantModulosRangeLNS, tempoRangeLNS, col="red")
 lines(finalData$periodAnswer, (finalData$expertsBestAnswer/finalData$numberUserBestAnswer), col="red", lwd = 2.1)
