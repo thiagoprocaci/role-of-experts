@@ -1,4 +1,4 @@
-#  The Role of Expert Users in Informal Learning Spaces: An Analytical Overview of Their Behavior and Ways to Connect to Them
+#  Experts and Likely to be Closed Discussions in Question and Answer Communities: An Analytical Overview
 
 ## Summary
 This project is part of a scientific research. We are interested in understanding the role of experts in online communities.
